@@ -1100,7 +1100,7 @@
             <div class="caixa-assistir">
                 <h3>A sessão já vai começar!</h3>
                 <p style="margin-bottom: 2rem;">Pegue sua pipoca, apague as luzes e confira todos os curtas-metragens produzidos pelos nossos estudantes.</p>
-                <a href="#" class="btn-principal" target="_blank">
+                <a href="https://maristabrasil-my.sharepoint.com/:f:/g/personal/gabriel_vargas_maristabrasil_org/IgAcp7XopSX-SLJxLfgIuOIhATZjCXIiL9YnMbFdPM7GzYE?e=PGbJzl" class="btn-principal" target="_blank" rel="noopener noreferrer">
                     <i class="fa-solid fa-film"></i> Assistir aos Curtas
                 </a>
             </div>
@@ -1291,6 +1291,19 @@
         const modalTitle = document.getElementById("modal-title");
         const modalDesc = document.getElementById("modal-desc");
         const modalIcon = document.getElementById("modal-icon");
+        const modalWinnerName = document.getElementById("modal-winner-name");
+        const vencedores = {
+            "1": "Suffocation",
+            "2": "O Retorno - Miguel Furjan",
+            "3": "O Retorno - Malu Paz",
+            "4": "A loucura do amanhã",
+            "5": "Devaneio",
+            "6": "A loucura do amanhã",
+            "7": "O Retorno",
+            "8": "O ultimo acorde",
+            "9": "Não é o que parece",
+            "10": "A propriedade Sandman"
+        };
         
         cardsCategoria.forEach(card => {
             card.addEventListener('click', () => {
@@ -1303,6 +1316,7 @@
                 modalTitle.innerText = title;
                 modalDesc.innerText = desc;
                 modalIcon.className = iconClass;
+                modalWinnerName.innerText = vencedores[card.dataset.num] || "Em breve...";
 
                 // Mostra o modal
                 modal.classList.add('show');
